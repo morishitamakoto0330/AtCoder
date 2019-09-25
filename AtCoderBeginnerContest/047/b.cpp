@@ -15,16 +15,24 @@ int main(void) {
 	for (i = 0; i < N; i++) {
 		cin >> x >> y >> a;
 		if (a == 1) {
-			X_LOW = x;
+			if (X_LOW < x) {
+				X_LOW = x;
+			}
 		}
 		else if (a == 2) {
-			X_HIGH = x;
+			if (X_HIGH > x) {
+				X_HIGH = x;
+			}
 		}
 		else if (a == 3) {
-			Y_LOW = y;
+			if (Y_LOW < y) {
+				Y_LOW = y;
+			}
 		}
 		else {
-			Y_HIGH = y;
+			if (Y_HIGH > y) {
+				Y_HIGH = y;
+			}
 		}
 	}
 	// calc area ----------------------------------
